@@ -1,3 +1,9 @@
+# Organizational stuff
+_plots/
+
+# Bad code
+exp_*.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
