@@ -135,6 +135,16 @@ def SampleMortality(model,samples,ifr_samples,delay_samples):
 	return destined_deaths, daily_deaths
 
 def advindexing_roll(A, r):
+	
+	""" The following code was originally posted to StackOverflow as part of 
+	question https://stackoverflow.com/questions/20360675/roll-rows-of-a-matrix-independently. 
+	Contributing authors were seberg (https://stackoverflow.com/users/455221/seberg), 
+	yatu (https://stackoverflow.com/users/9698684/yatu), 
+	divakar (https://stackoverflow.com/users/3293881/divakar), 
+	Yann Dubois (https://stackoverflow.com/users/6232494/yann-dubois), and 
+	logicOnAbstractions (https://stackoverflow.com/users/3633696/logiconabstractions). 
+	Code from StackOverflow is provided subject to the Creative Commons Attribution Share-Alike license. """
+	
 	rows, column_indices = np.ogrid[:A.shape[0], :A.shape[1]]
 	r[r < 0] += A.shape[1]
 	column_indices = column_indices - r[:,np.newaxis]
