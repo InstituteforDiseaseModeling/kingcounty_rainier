@@ -104,23 +104,3 @@ def PlotDataOnGDF(fig,axes,series,gdf,
 	axes.autoscale_view()
 
 	return fig, axes
-
-if __name__ == "__main__":
-
-	## For testing
-	gdf = geopandas.read_file("..\\_data\\sfs_domain_geojsons\\sfs_domain_zipcodes.geojson")
-
-	## Make some fake data
-	data = pd.Series(np.random.uniform(0,1,size=(len(gdf),)),
-					 index=gdf["GEOID10"])
-
-	## Test figure
-	fig, axes = plt.subplots(figsize=(13,12))
-	PlotBorders(fig,axes,gdf,color="k",lw=0.5)
-	PlotDataOnGDF(fig,axes,data,gdf,
-				  shape_name="GEOID10",
-				  colorbar=True,clim=(0,1))
-	axes.set(aspect="equal")
-	axes.axis("off")
-	fig.tight_layout()
-	plt.show()

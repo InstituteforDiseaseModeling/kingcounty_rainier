@@ -2,10 +2,7 @@
 
 Utilities for RAINIER (Reporting Adjusted Immuno-Naive, Infected, Exposed Regression). These
 functions and classes manage analysis of case-data time series for comparison with regression
-models. 
-
-
-NOTE: THIS IS A WORK IN PROGRESS! CODE IS NOT YET FUNCTIONAL """
+models. """
 import sys
 sys.path.append("..\\")
 import warnings
