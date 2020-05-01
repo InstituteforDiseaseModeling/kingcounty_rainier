@@ -23,6 +23,20 @@ We did the analysis using Python 3.6.10. The following Python packages are also 
 *  matplotlib (3.1.0)
 *  tqdm (4.26.0)
 
+Recommended Install Instructions
+============
+
+1. Clone a copy of the repository.
+
+2. (Optional) Create and activate a virtual environment.
+
+3. Navigate to the root of the repository and install with:
+        ::
+
+          python setup.py develop
+
+This will install all the required Python package dependencies.
+
 Licenses
 ========
 
