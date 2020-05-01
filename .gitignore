@@ -1,5 +1,5 @@
 # Organizational stuff
-_plots/
+#_plots/
 
 # Bad code
 exp_*.py
