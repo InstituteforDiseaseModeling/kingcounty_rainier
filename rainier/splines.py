@@ -9,6 +9,7 @@ import pandas as pd
 
 ## For the B-spline basis
 from scipy.interpolate import BSpline
+from scipy.stats import trapz
 
 #### Smoothing spline
 ##############################################################################

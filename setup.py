@@ -1,6 +1,6 @@
 '''
-kingcount_rainier installation. Requirements are listed in requirements.txt. Quick install by:
-    python setup.py develop          # standard install
+kingcounty_rainier installation. Quick install by:
+    python setup.py develop
 '''
 
 from setuptools import setup, find_packages
