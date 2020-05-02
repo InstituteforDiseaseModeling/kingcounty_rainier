@@ -24,7 +24,7 @@ We did the analysis using Python 3.6.10. The following Python packages are also 
 *  tqdm (4.26.0)
 
 Recommended Install Instructions
-============
+================================
 
 1. Clone a copy of the repository.
 
@@ -36,6 +36,13 @@ Recommended Install Instructions
           python setup.py develop
 
 This will install all the required Python package dependencies.
+
+Running RAINIER
+---------------
+
+1. From the report_april26 directory, run
+2. > python <Report_Script_Name>.py (e.g. RAINIER.py)
+
 
 Licenses
 ========
