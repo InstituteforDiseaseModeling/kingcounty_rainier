@@ -25,14 +25,14 @@ def axes_setup(axes):
 if __name__ == "__main__":
 
 	## Get the second report
-	kc2_points = pd.read_pickle("../_outputs/r0_4_10.pkl")
-	kc2_m = pd.read_pickle("../_outputs/mobility_r0_4_10.pkl")
+	kc2_points = pd.read_pickle(Path("../_outputs/r0_4_10.pkl"))
+	kc2_m = pd.read_pickle(Path("../_outputs/mobility_r0_4_10.pkl"))
 
 	## Get the third report
-	kc3_points = pd.read_pickle("../_outputs/r0_4_19.pkl")
+	kc3_points = pd.read_pickle(Path("../_outputs/r0_4_19.pkl"))
 
 	## Get the latest points
-	kc4_points = pd.read_pickle("../_outputs/r0_4_26.pkl")
+	kc4_points = pd.read_pickle(Path("../_outputs/r0_4_26.pkl"))
 
 	## Set up a figure
 	fig, axes = plt.subplots(figsize=(18,9),sharex=True)

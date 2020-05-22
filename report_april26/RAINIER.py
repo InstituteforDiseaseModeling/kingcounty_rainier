@@ -56,7 +56,7 @@ def GetSCANPrevalence(version="recent"):
 if __name__ == "__main__":
 
 	## Get the county (or county group) specific dataset
-	dataset = pd.read_pickle("../pickle_jar/aggregated_king_linelist_april26.pkl")
+	dataset = pd.read_pickle(Path("../pickle_jar/aggregated_king_linelist_april26.pkl"))
 
 	## How do you handle data at the end, where increased testing and
 	## lags might be an issue?
