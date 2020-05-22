@@ -3,9 +3,11 @@ RAINIER
 =======
 
 RAINIER is a statistical approach for fitting SEIR epidemic models to case and mortality
-data. This example demonstrates the approach on COVID-19 data from King County, WA.
+data. We use the approach to create models of COVID-19 transmission in King County, WA.
 
 For detailed information, see the report on King County associated with this code. [LINK]
+
+In this repository, we demonstrate how the approach can be applied to a synthetically generated, King County-like dataset.
 
 .. contents:: Contents
    :local:
