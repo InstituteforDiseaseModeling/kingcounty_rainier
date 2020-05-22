@@ -144,7 +144,7 @@ if __name__ == "__main__":
 	axes.set_ylabel(r"Effective reproductive number (R$_{e}$)")
 	axes.set_xticks(r0_estimates.index[::6])
 	fig.tight_layout()
-	fig.savefig("../_plots/r0.png")
+	fig.savefig(Path("../_plots/r0.png"))
 
 	## Set up a forecast time for plotting
 	plot_time = pd.date_range(start=time[0],end="2020-04-29",freq="d")
@@ -262,7 +262,7 @@ if __name__ == "__main__":
 	
 	## Save the multipanel
 	fig.tight_layout()
-	fig.savefig("../_plots/fit.png")
+	fig.savefig(Path("../_plots/fit.png"))
 
 	## Compute active infections (and describe)
 	prevalence = pd.DataFrame((samples[:,1,:] + samples[:,2,:]).T/population,
@@ -334,7 +334,7 @@ if __name__ == "__main__":
 	axes2.set_xlabel("Percent of incidence reported\nto the WDRS")
 
 	## Save the output
-	fig.savefig("../_plots/output.png")
+	fig.savefig(Path("../_plots/output.png"))
 
 	## Done
 	plt.show()

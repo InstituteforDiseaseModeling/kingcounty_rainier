@@ -239,6 +239,6 @@ if __name__ == "__main__":
 					  pd.to_datetime("2020-05-01"),
 					  pd.to_datetime("2020-06-01")])
 	axes2.set_xticklabels(["March 1","April 1","May 1","June 1"])
-	fig.savefig("../_plots/forecast.png")
+	fig.savefig(Path("../_plots/forecast.png"))
 
 	plt.show()

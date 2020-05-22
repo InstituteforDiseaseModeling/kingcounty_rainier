@@ -62,5 +62,5 @@ if __name__ == "__main__":
 	axes.legend(loc=1,frameon=False,fontsize=28)
 	axes.set_ylabel(r"Effective reproductive number (R$_{e}$)")
 	fig.tight_layout()
-	fig.savefig("../_plots/model_compare.png")
+	fig.savefig(Path("../_plots/model_compare.png"))
 	plt.show()

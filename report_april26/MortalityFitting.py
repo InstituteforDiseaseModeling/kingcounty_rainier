@@ -197,7 +197,7 @@ if __name__ == "__main__":
 			  ls="None",color="k",marker="o",markersize=10,label="Daily King County COVID-19 deaths reported in WDRS")
 	axes.legend(loc=2,frameon=False,fontsize=28)
 	fig.tight_layout()
-	fig.savefig("../_plots/mortality.png")
+	fig.savefig(Path("../_plots/mortality.png"))
 
 	## Finish up
 	plt.show()

@@ -59,7 +59,7 @@ def SplineTestingEpiCurve(dataset,debug=False):
 		axes[1].set_ylabel("Total COVID-19 tests")
 		axes[2].set_ylabel("Fraction positive")
 		fig.tight_layout()
-		fig.savefig("../_plots/debug.png")
+		fig.savefig(Path("../_plots/debug.png"))
 		plt.show()
 		sys.exit()
 
@@ -102,7 +102,7 @@ def StepTestingEpiCurve(dataset,regimes,debug=False):
 		axes[1].set_ylabel("Total tests")
 		axes[2].set_ylabel("Fraction positive from WDRS")
 		fig.tight_layout()
-		fig.savefig("../_plots/debug.png")
+		fig.savefig(Path("../_plots/debug.png"))
 		plt.show()
 		sys.exit()
 
@@ -219,7 +219,7 @@ def continuous_time_posterior(p,model,cases,tr_start,debug=False):
 					 rotation=-90)
 		## Done
 		fig.tight_layout()
-		fig.savefig("../_plots/debug.png")
+		fig.savefig(Path("../_plots/debug.png"))
 		plt.show()
 		sys.exit()
 
@@ -322,7 +322,7 @@ def continuous_time_posterior_sampler(p,model,cases,num_spline_samples,tr_start,
 		
 		## Done
 		fig.tight_layout()
-		fig.savefig("../_plots/debug.png")
+		fig.savefig(Path("../_plots/debug.png"))
 		plt.show()
 		sys.exit()
 
