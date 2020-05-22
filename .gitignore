@@ -4,9 +4,6 @@
 # Bad code
 exp_*.py
 
-# Sensitive data
-pickle_jar/
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
