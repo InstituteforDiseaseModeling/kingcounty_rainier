@@ -91,7 +91,7 @@ if __name__ == "__main__":
     importations = pd.Series(np.zeros(len(cases), ),
                              index=cases.index,
                              name="importations")
-    importations.loc["01-15-2020"] = 39.125244097003204
+    importations.loc["01-15-2020"] = 14.355994331339557
 
     ## Set up the initial susceptible population based on
     ## the population of King County
