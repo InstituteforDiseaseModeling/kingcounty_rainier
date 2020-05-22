@@ -3,7 +3,8 @@
 Using non-linear least squares to fit importation pulse sizes to mortality 
 data in the WDRS. """
 import sys
-sys.path.append("..\\")
+from pathlib import Path
+sys.path.append(Path("../"))
 
 ## Standard imports
 import numpy as np
@@ -68,7 +69,7 @@ def RSS(theta,model,beta_t,pulse_indices,observed_deaths,
 if __name__ == "__main__":
 
 	## Get the county (or county group) specific dataset
-	dataset = pd.read_pickle("..\\pickle_jar\\aggregated_king_linelist_april26.pkl")
+	dataset = pd.read_pickle(Path("../pickle_jar/aggregated_king_linelist_april26.pkl"))
 
 	## How do you handle data at the end, where increased testing and
 	## lags might be an issue?
@@ -196,7 +197,7 @@ if __name__ == "__main__":
 			  ls="None",color="k",marker="o",markersize=10,label="Daily King County COVID-19 deaths reported in WDRS")
 	axes.legend(loc=2,frameon=False,fontsize=28)
 	fig.tight_layout()
-	fig.savefig("..\\_plots\\mortality.png")
+	fig.savefig(Path("../_plots/mortality.png"))
 
 	## Finish up
 	plt.show()

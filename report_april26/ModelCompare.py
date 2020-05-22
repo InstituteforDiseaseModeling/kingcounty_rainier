@@ -3,7 +3,8 @@
 Compare the previous KC reports' statistical model output to the new version 
 based on updated data. """
 import sys
-sys.path.append("..\\")
+from pathlib import Path
+sys.path.append(Path("../"))
 import warnings
 
 ## Standard imports
@@ -24,14 +25,14 @@ def axes_setup(axes):
 if __name__ == "__main__":
 
 	## Get the second report
-	kc2_points = pd.read_pickle("..\\_outputs\\r0_4_10.pkl")
-	kc2_m = pd.read_pickle("..\\_outputs\\mobility_r0_4_10.pkl")
+	kc2_points = pd.read_pickle(Path("../_outputs/r0_4_10.pkl"))
+	kc2_m = pd.read_pickle(Path("../_outputs/mobility_r0_4_10.pkl"))
 
 	## Get the third report
-	kc3_points = pd.read_pickle("..\\_outputs\\r0_4_19.pkl")
+	kc3_points = pd.read_pickle(Path("../_outputs/r0_4_19.pkl"))
 
 	## Get the latest points
-	kc4_points = pd.read_pickle("..\\_outputs\\r0_4_26.pkl")
+	kc4_points = pd.read_pickle(Path("../_outputs/r0_4_26.pkl"))
 
 	## Set up a figure
 	fig, axes = plt.subplots(figsize=(18,9),sharex=True)
@@ -61,5 +62,5 @@ if __name__ == "__main__":
 	axes.legend(loc=1,frameon=False,fontsize=28)
 	axes.set_ylabel(r"Effective reproductive number (R$_{e}$)")
 	fig.tight_layout()
-	fig.savefig("..\\_plots\\model_compare.png")
+	fig.savefig(Path("../_plots/model_compare.png"))
 	plt.show()

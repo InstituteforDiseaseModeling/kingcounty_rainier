@@ -3,7 +3,8 @@
 County level estimates of Reff over time, with comparison of different covariate driven
 models. Same as RAINIER.py but the plots are adjusted to be multi-panel instead of individual. """
 import sys
-sys.path.append("..\\")
+from pathlib import Path
+sys.path.append(Path("../"))
 
 ## Standard imports
 import numpy as np
@@ -55,7 +56,7 @@ def GetSCANPrevalence(version="recent"):
 if __name__ == "__main__":
 
 	## Get the county (or county group) specific dataset
-	dataset = pd.read_pickle("..\\pickle_jar\\aggregated_king_linelist_april26.pkl")
+	dataset = pd.read_pickle(Path("../pickle_jar/aggregated_king_linelist_april26.pkl"))
 
 	## How do you handle data at the end, where increased testing and
 	## lags might be an issue?
@@ -143,7 +144,7 @@ if __name__ == "__main__":
 	axes.set_ylabel(r"Effective reproductive number (R$_{e}$)")
 	axes.set_xticks(r0_estimates.index[::6])
 	fig.tight_layout()
-	fig.savefig("..\\_plots\\r0.png")
+	fig.savefig(Path("../_plots/r0.png"))
 
 	## Set up a forecast time for plotting
 	plot_time = pd.date_range(start=time[0],end="2020-04-29",freq="d")
@@ -261,7 +262,7 @@ if __name__ == "__main__":
 	
 	## Save the multipanel
 	fig.tight_layout()
-	fig.savefig("..\\_plots\\fit.png")
+	fig.savefig(Path("../_plots/fit.png"))
 
 	## Compute active infections (and describe)
 	prevalence = pd.DataFrame((samples[:,1,:] + samples[:,2,:]).T/population,
@@ -333,7 +334,7 @@ if __name__ == "__main__":
 	axes2.set_xlabel("Percent of incidence reported\nto the WDRS")
 
 	## Save the output
-	fig.savefig("..\\_plots\\output.png")
+	fig.savefig(Path("../_plots/output.png"))
 
 	## Done
 	plt.show()

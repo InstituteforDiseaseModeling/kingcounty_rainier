@@ -2,7 +2,8 @@
 
 Scenario forecasting with the 4/26 version of the data and model. """
 import sys
-sys.path.append("..\\")
+from pathlib import Path
+sys.path.append(Path("../"))
 
 ## Standard imports
 import numpy as np
@@ -39,7 +40,7 @@ def low_mid_high(samples):
 if __name__ == "__main__":
 
 	## Get the county (or county group) specific dataset
-	dataset = pd.read_pickle("..\\pickle_jar\\aggregated_king_linelist_april26.pkl")
+	dataset = pd.read_pickle(Path("../pickle_jar/aggregated_king_linelist_april26.pkl"))
 
 	## How do you handle data at the end, where increased testing and
 	## lags might be an issue?
@@ -238,6 +239,6 @@ if __name__ == "__main__":
 					  pd.to_datetime("2020-05-01"),
 					  pd.to_datetime("2020-06-01")])
 	axes2.set_xticklabels(["March 1","April 1","May 1","June 1"])
-	fig.savefig("..\\_plots\\forecast.png")
+	fig.savefig(Path("../_plots/forecast.png"))
 
 	plt.show()
